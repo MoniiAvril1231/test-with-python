@@ -1,3 +1,5 @@
-nombre = input("What is your name?") 
+nombre = input("What is your name?: ")
 
-print( "do you want to go out with me" + nombre)
+mensaje = "do you want to go out with me " + nombre
+
+print(mensaje)
