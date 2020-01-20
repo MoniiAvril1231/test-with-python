@@ -1,15 +1,21 @@
 import os
 nom = ""
-sue = 0
-tser = 0
-bon = 0
+ulec = 0
+nlec = 0
+kwat = 0
+otros = 0
+total = 0
 resp = ""
 con = 0
-while resp!="N":
-    nom = input("ingrese su nombre: ")
-    sue = int(input("ingrese su sueldo: "))
-    tser = int(input("tiempo de servicio: "))
-    con = con + 1
+nom = input("ingrese su nombre: ")
+    ulec = int(input("ingrese su ultima lectura: "))
+    nlec = int(input("ingrese su nueva lectura: "))
+    kwat = float(input("ingrese precio de kwatt; "))
+    otros = int(input("Ingrese montos extras: "))
+    total = (((ulec - nlec)*kwat) + otros)
+    print("La bonificacion de: " + nom +" es: "+ str(total))
+
+    ''''
     if tser>=1 and tser<=3:
         bon = sue * 0.02
     elif tser>=4 and tser<=5:
@@ -19,4 +25,4 @@ while resp!="N":
     print("La bonificacion de: " + nom +" es: "+ str(bon))
     resp = input("Desea continuar:")
     os.system('cls')
-print("la cantidad de trabajadores calculados:"+str(con))
+print("la cantidad de trabajadores calculados:"+str(con)) ''
